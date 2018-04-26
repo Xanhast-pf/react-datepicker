@@ -44,6 +44,7 @@
 
   &[data-placement^="bottom"] {
     margin-top: $datepicker__triangle-size + 2px;
+    background-color: $datepicker__background-color;
 
     .react-datepicker__triangle {
       @extend %triangle-arrow-up;
@@ -52,6 +53,7 @@
 
   &[data-placement^="top"] {
     margin-bottom: $datepicker__triangle-size + 2px;
+    background-color: $datepicker__background-color;
 
     .react-datepicker__triangle {
       @extend %triangle-arrow-down;
@@ -308,7 +310,8 @@
     color: #fff;
 
     &:hover {
-      background-color: darken($datepicker__highlighted-color, 5%);
+      background-color: #ffffff;
+      border: 2px solid #52bad6;
     }
 
     &-custom-1 {
@@ -328,7 +331,8 @@
     color: #fff;
 
     &:hover {
-      background-color: darken($datepicker__selected-color, 5%);
+      background-color: #ffffff;
+      border: 2px solid #52bad6;
     }
   }
 

@@ -3,6 +3,8 @@ import uglify from "rollup-plugin-uglify";
 
 const env = process.env.NODE_ENV;
 
+console.log("ROLLUP UMD CONFIG");
+
 const umdConfig = Object.assign({}, config, {
   output: Object.assign({}, config.output, {
     format: "umd",

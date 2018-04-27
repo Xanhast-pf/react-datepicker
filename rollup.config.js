@@ -3,7 +3,7 @@ import babel from "rollup-plugin-babel";
 import commonjs from "rollup-plugin-commonjs";
 import { list as babelHelpersList } from "babel-helpers";
 import pkg from "./package.json";
-
+console.log("ROLLUP CONFIG");
 const config = {
   output: {
     format: process.env.BABEL_ENV

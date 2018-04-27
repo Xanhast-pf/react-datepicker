@@ -300,6 +300,7 @@
   cursor: pointer;
   font-weight: 500;
   margin: 4px;
+  border: 2px solid transparent;
 
   &:hover {
     color: $datepicker__text-color;

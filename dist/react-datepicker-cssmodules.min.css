@@ -395,6 +395,7 @@
   cursor: pointer;
   font-weight: 500;
   margin: 4px;
+  border: 2px solid transparent;
 }
 :global .react-datepicker__day:hover {
   color: #333;

@@ -9,10 +9,10 @@ $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 10%)
   !default;
 
 $datepicker__border-radius: 4px !default;
-$datepicker__day-margin: 0px !default;
+$datepicker__day-margin: 4px !default;
 $datepicker__font-size: 15px !default;
 $datepicker__font-family: "Open Sans", Helvetica, Arial, sans-serif !default;
-$datepicker__item-size: 1.7rem !default;
+$datepicker__item-size: 40px !default;
 $datepicker__margin: 0.4rem !default;
-$datepicker__navigation-size: 0.45rem !default;
+$datepicker__navigation-size: 8px !default;
 $datepicker__triangle-size: 8px !default;

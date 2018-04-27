@@ -14,6 +14,8 @@
   border-radius: $datepicker__border-radius;
   display: inline-block;
   position: relative;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+  padding: 24px;
 }
 
 .react-datepicker--time-only {
@@ -125,18 +127,18 @@
   text-align: center;
   cursor: pointer;
   position: absolute;
-  top: 10px;
   width: 0;
   padding: 0;
   border: $datepicker__navigation-size solid transparent;
   z-index: 1;
+  margin-top: 8px;
 
   &--previous {
-    left: 10px;
-    border-right-color: $datepicker__muted-color;
+    left: 24px;
+    border-right-color: $datepicker__selected-color;
 
     &:hover {
-      border-right-color: darken($datepicker__muted-color, 10%);
+      border-right-color: darken($datepicker__selected-color, 10%);
     }
 
     &--disabled,
@@ -147,14 +149,14 @@
   }
 
   &--next {
-    right: 10px;
-    border-left-color: $datepicker__muted-color;
+    right: 24px;
+    border-left-color: $datepicker__selected-color;
     &--with-time:not(&--with-today-button) {
       right: 80px;
     }
 
     &:hover {
-      border-left-color: darken($datepicker__muted-color, 10%);
+      border-left-color: darken($datepicker__selected-color, 10%);
     }
 
     &--disabled,
@@ -290,18 +292,25 @@
   line-height: $datepicker__item-size;
   text-align: center;
   margin: $datepicker__day-margin;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .react-datepicker__day {
   cursor: pointer;
+  font-weight: 500;
+  margin: 4px;
 
   &:hover {
+    color: $datepicker__text-color;
+    background-color: #ffffff;
+    border: 2px solid #52bad6;
     border-radius: $datepicker__border-radius;
-    background-color: $datepicker__background-color;
   }
 
   &--today {
     font-weight: bold;
+    color: $datepicker__selected-color;
   }
 
   &--highlighted {
@@ -310,6 +319,7 @@
     color: #fff;
 
     &:hover {
+      color: $datepicker__text-color;
       background-color: #ffffff;
       border: 2px solid #52bad6;
     }
@@ -331,6 +341,7 @@
     color: #fff;
 
     &:hover {
+      color: $datepicker__text-color;
       background-color: #ffffff;
       border: 2px solid #52bad6;
     }
@@ -338,22 +349,28 @@
 
   &--keyboard-selected {
     border-radius: $datepicker__border-radius;
-    background-color: lighten($datepicker__selected-color, 10%);
+    background-color: $datepicker__selected-color;
     color: #fff;
 
     &:hover {
-      background-color: darken($datepicker__selected-color, 5%);
+      color: $datepicker__text-color;
+      background-color: #ffffff;
+      border: 2px solid #52bad6;
     }
   }
 
   &--in-selecting-range:not(&--in-range) {
     background-color: rgba($datepicker__selected-color, 0.5);
+    &:hover {
+      color: $datepicker__text-color;
+      background-color: #ffffff;
+      border: 2px solid #52bad6;
+    }
   }
 
   &--in-range:not(&--in-selecting-range) {
     .react-datepicker__month--selecting-range & {
-      background-color: $datepicker__background-color;
-      color: $datepicker__text-color;
+      background-color: rgba($datepicker__selected-color, 0.5);
     }
   }
 
@@ -534,18 +551,20 @@
 
   .react-datepicker__current-month,
   .react-datepicker-time__header {
-    font-size: $datepicker__font-size * 1.8;
+    font-size: 16px;
   }
 
   .react-datepicker__navigation {
-    border: 1.8 * $datepicker__navigation-size solid transparent;
+    padding: 0px;
+    top: 0px;
+    border: 2.5 * $datepicker__navigation-size solid transparent;
   }
 
   .react-datepicker__navigation--previous {
-    border-right-color: $datepicker__muted-color;
+    border-right-color: $datepicker__selected-color;
 
     &:hover {
-      border-right-color: darken($datepicker__muted-color, 10%);
+      border-right-color: $datepicker__selected-color;
     }
 
     &--disabled,
@@ -556,10 +575,10 @@
   }
 
   .react-datepicker__navigation--next {
-    border-left-color: $datepicker__muted-color;
+    border-left-color: $datepicker__selected-color;
 
     &:hover {
-      border-left-color: darken($datepicker__muted-color, 10%);
+      border-left-color: $datepicker__selected-color;
     }
 
     &--disabled,
